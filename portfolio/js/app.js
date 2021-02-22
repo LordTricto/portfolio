@@ -50,7 +50,8 @@ function splitScroll(y,z){
         const scene1 = new ScrollMagic.Scene({
             duration:'200%',
             triggerElement: content1,
-            triggerHook: 0
+            triggerHook: 0,
+            reverse:false
         })
         .setPin(content1)
         .addIndicators()
@@ -62,7 +63,8 @@ function splitScroll(y,z){
     const scene0 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim0)
     
