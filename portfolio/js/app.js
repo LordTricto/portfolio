@@ -43,10 +43,7 @@ function splitScroll(y,z){
 
 
     if (y.matches || z.matches) { // If media query matches
-        // body2.style.background = "yellow";
-        console.log('hi');
       } else {
-        console.log('hiiiii');
         const scene1 = new ScrollMagic.Scene({
             duration:'200%',
             triggerElement: content1,
@@ -54,9 +51,7 @@ function splitScroll(y,z){
             reverse:false
         })
         .setPin(content1)
-        .addIndicators()
         .addTo(controller);
-        // body2.style.background = "#DAF3FF";
     }
 
     const textAnim0 = TweenMax.fromTo(body0,1.5, {x: "-1800",y:"-50", opacity: 0,  skewX:"20deg" }, {x:0, y:0,  opacity:1, ease: Power2.easeOut,  skewX:"0deg" });
@@ -317,20 +312,6 @@ function splitScroll(y,z){
    
     .addTo(controller);
 
-    
-    TweenLite.onOverwrite = function(overwritten, overwriting, target, props) {
-        console.log("tween that was overwritten");
-        console.log(overwritten);
-        
-        console.log("tween that did the overwriting")
-        console.log(overwriting);
-        
-        console.log("the target of the overwritten tween");
-        console.log(target.innerHTML);
-        
-        console.log("properties that were overwritten");
-        console.log(props);
-      }
 
       var wrapperMenu = document.querySelector('.wrapper-menu');
       var phoneMenu = document.querySelector('.phone-menu');
