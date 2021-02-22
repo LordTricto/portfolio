@@ -74,7 +74,8 @@ function splitScroll(y,z){
     const scene2 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim)
     
@@ -84,7 +85,8 @@ function splitScroll(y,z){
     const scene3 = new ScrollMagic.Scene({
         offset:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim2)
     
@@ -94,7 +96,8 @@ function splitScroll(y,z){
     const scene4 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim3)
    
@@ -104,7 +107,8 @@ function splitScroll(y,z){
     const scene5 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim4)
     
@@ -114,7 +118,8 @@ function splitScroll(y,z){
     const scene6 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim5)
   
@@ -124,7 +129,8 @@ function splitScroll(y,z){
     const scene7 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim6)
    
@@ -134,7 +140,8 @@ function splitScroll(y,z){
     const scene8 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:body,
-        triggerHook:0
+        triggerHook:0,
+        reverse:false
     })
     .setTween(textAnim7)
    
