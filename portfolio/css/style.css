@@ -10,11 +10,11 @@ html{
 }
 @keyframes loading {
   0% {
-    right: 100%;
+    opacity: 0; 
     
   }
-  75%, 100% {
-    right: 30%;
+   100% {
+    opacity: 1; 
   }
 }
 @keyframes slide {
@@ -87,14 +87,73 @@ html{
         transform: translateY(100px);
     }
   }
-
+  @keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
 body{
    
     background-color: white;
   
 }
+.spinner{
+    width: 200px;
+    height: 200px;
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation: spin 1s infinite linear;
+}
+.spinner-done{
+    width: 200px;
+    height: 200px;
+    border:3px solid #f25a41;
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#f25a41 ;
+    transition: all 0.5s ease;
+    font-size: 100px;
+}
+.spinner-done i{
+   opacity: 0.3;
+}
 
 
+.preload{
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    color: #000000;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+}
+.preload-finish{
+    z-index: -3;
+    pointer-events: none;
+}
 
 
 
@@ -254,7 +313,7 @@ nav{
     height: 100%;
     z-index: 2;
     line-height:150px ;
-    overflow-x: hidden;
+  
 }
 .intro-text h5{
     font-size: 45px;
@@ -931,7 +990,6 @@ input:-webkit-autofill:focus {
         min-height: 40vh;
         z-index: 2;
         line-height: 100px;
-        overflow-x: hidden;
     }
     .intro-text h1{
         font-size: 60px;
@@ -1056,8 +1114,219 @@ input:-webkit-autofill:focus {
     }
 }
 
+@media screen and (max-width: 1294px){
+    .html i, .css i, .javascript i, .node i, .react i {
+        font-size: 80px;
+    }
+    .intro-pic img {
+        position: absolute;
+        bottom: 0;
+        right: 120px;
+        height: 650px;
+        width: 450px;
+    }
+}
+@media screen and (max-width: 1200px){
+    .html i, .css i, .javascript i, .node i, .react i {
+        font-size: 80px;
+    }
+    .nav-right {
+        width: 35vw;
+    }
+    .intro-pic img {
+        position: absolute;
+        bottom: 0;
+        right: 70px;
+        height: 650px;
+        width: 450px;
+    }
+    .cta {
+        font-size: 20px;
+        font-weight: 900px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 867px){
+    nav{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .nav-right{
+        width: 40vw;
+    }
+    .nav-right ul{
+        list-style: none;
+        font-size: 25px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bgc-cheese1{
+        height: 550px;
+        width:  550px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 2%;  
+    }
+    .intro-section {
+        min-width: 40vw;
+        height: 55vh;
+    }
+    .intro-text {
+        min-width: 40vw;
+        min-height: 35vh;
+        z-index: 2;
+        line-height: 100px;
+    }
+    .intro-text h1{
+        font-size: 60px;
+        line-height: 85px;
+    }
+    .intro-text h5{
+        font-size: 30px;
+        line-height: 70px;
+    }
+    .intro-pic img{
+        position: absolute;
+        bottom: 0;
+        right: 50px;
+        height: 650px;
+        width: 400px;
+    }
+
+    .cta{
+        font-size: 20px;
+        font-weight: 900px;
+        padding: 10px;
+    }
+    .skill-title h2{
+        font-size: 60px;
+    }
+    .intro-top h1 {
+        font-size: 30px;
+    }
+   
+    .skills-list {
+        flex-direction: column;
+    }
+    /* .node{
+        position: absolute;
+        animation: move1 1s ease-in-out infinite alternate;
+    } */
+    .html h1, .css h1, .javascript h1, .node h1, .react h1 {
+        z-index: 2;
+        font-size: 18px;
+    }
+    .html-icon, .css-icon, .javascript-icon, .node-icon, .react-icon{
+        width: 150px;
+        height: 100px;
+    }
+    .html, .css, .javascript, .node, .react{
+        width: 150px;
+        height: 200px;
+    }
+    .html i, .css i, .javascript i, .node i, .react i{
+        font-size: 90px;
+    }
+    .html:hover i, .css:hover i, .javascript:hover i, .node:hover i, .react:hover i{
+        font-size: 120px;
+    }
+    .project-title h2{
+        font-size: 60px;
+    }
+    .project-name,.project-name2 ,.project-name3{
+        font-size: 25px;
+        text-align: center;
+        width: 80%;
+    }
+    .text-design {
+        font-size: 25px;
+    }
+    .text-design2 {
+        font-size: 22px;
+    }
+    .simi-desktop,.plankworld-desktop,.ecommerce-desktop {
+        width: 25vw;
+    }
+    .simi-phone,.plankworld-phone,.ecommerce-phone {
+        height: 200px;
+        width: 100px;
+    }
+    .project-details, .project-details2, .project-details3 {
+        font-size: 25px;
+    }
+    .go, .go2, .go3 {
+        font-size: 17px;
+    }
+    .go i, .go2 i, .go3 i {
+        font-size: 17px;
+    }
+    .about{
+        min-height: 50vh;
+    }
+    .about-body {
+        min-height: 70vh;
+    }
+    .about h2 {
+        font-size: 60px;
+    }
+    .about-body-left h3 {
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .text-design3{
+        font-size: 21px;
+    }
+    .about-body-right-image {
+        min-height: 600px;
+        width: 370px;
+    }
+    .about-body-right-image img {
+        height: 600px;
+        width: 450px;
+        top: 2vh;
+        right: 10px;
+    }
+    .hire {
+        min-height: 70vh;
+    }
+    .hire-head {
+        text-align: center;
+        line-height: 50px;
+    }
+    .hire-head h1 {
+        font-size: 50px;
+    }
+    .hire-head h2 {
+        font-size: 40px;
+    }
+    .hire-form {
+        min-height: 40vh;
+    }
+    .name-section, .email-section, .message-section {
+        font-size: 20px;
+        height: 100px;
+    }
+    .name-section input, .email-section input, .message-section textarea {
+        font-size: 18px;
+    }
+    .button {
+        font-size: 18px;
+    }
+   .f-socials{
+    font-size: 20px;
+    }
+    .hire-head {
+        text-align: center;
+        line-height: 70px;
+    }
+}
+
 /* iPad Pro */
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) and (min-height: 867px){
     nav{
         font-size: 30px;
         font-weight: 600;
@@ -1083,29 +1352,29 @@ input:-webkit-autofill:focus {
     }
     .intro-section {
         min-width: 40vw;
-        height: 45vh;
+        height: 55vh;
     }
     .intro-text {
         min-width: 40vw;
-        min-height: 25vh;
+        min-height: 18vh;
+        height: unset;
         z-index: 2;
-        line-height: 100px;
-        overflow-x: hidden;
+        line-height: 50px;
     }
     .intro-text h1{
         font-size: 60px;
-        line-height: 100px;
+        line-height: 80px;
     }
     .intro-text h5{
         font-size: 30px;
-        line-height: 100px;
+        line-height:70px;
     }
     .intro-pic img{
         position: absolute;
         bottom: 0;
-        right: 0px;
-        height: 900px;
-        width: 550px;
+        right: 50px;
+        height: 800px;
+        width: 500px;
     }
 
     .cta{
@@ -1232,8 +1501,44 @@ input:-webkit-autofill:focus {
     }
 }
 
+@media screen and (max-width: 940px){
+    .nav-right {
+        width: 45vw;
+    }
+    .about-body-left h3 {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .text-design3 {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 860px){
+    
+    .about-body-right-image {
+        min-height: 600px;
+        width: 300px;
+    }
+    .about-body-right-image img {
+        height: 550px;
+        width: 400px;
+        top: 4vh;
+        right: 10px;
+    }
+    .button {
+        width: 13vw;
+    }
+    .bgc-cheese1 {
+        height: 750px;
+        width: 750px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 2%;
+    }
+}
 /* iPad */
-@media screen and (max-width: 770px){
+@media screen and (max-width: 770px) and (min-height: 1030px){
     nav{
         font-size: 30px;
     }
@@ -1266,7 +1571,6 @@ input:-webkit-autofill:focus {
         height: 40vh;
         z-index: 2;
         line-height: 20px;
-        overflow-x: hidden;
     }
     .intro-text h1{
         font-size: 50px;
@@ -1406,6 +1710,266 @@ input:-webkit-autofill:focus {
 
     
 }
+
+@media screen and (max-width: 770px) and (max-height: 1030px){
+    nav{
+        font-size: 25px;
+    }
+    .nav-right{
+        width: 50vw;
+    }
+    .nav-right ul{
+        list-style: none;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bgc-cheese1{
+        height: 600px;
+        width:  600px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 2%;  
+    }
+    .intro-section {
+        min-width: 40vw;
+        height: 60vh;
+    }
+    .intro-text {
+        min-width: 40vw;
+        min-height: 20vh;
+        height: 65vh;
+        z-index: 2;
+        line-height: 20px;
+    }
+    .intro-text h1{
+        font-size: 45px;
+        line-height: 75px;
+    }
+    .intro-text h5{
+        font-size: 27px;
+        line-height: 70px;
+    }
+    .intro-pic img{
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        height: 600px;
+        width: 400px;
+    }
+
+    .cta{
+        font-size: 20px;
+        font-weight: 900px;
+        padding: 10px;
+    }
+    .skill-title h2{
+        font-size: 50px;
+    }
+    .intro-top h1{
+        font-size: 25px;
+    }
+    .skills-list {
+        flex-direction: column;
+    }
+    .html h1, .css h1, .javascript h1, .node h1, .react h1{
+        z-index: 2;
+        font-size: 15px;
+    }
+    .html-icon, .css-icon, .javascript-icon, .node-icon, .react-icon{
+        width: 80px;
+        height: 130px;
+    }
+    .html, .css, .javascript, .node, .react{
+        width: 80px;
+        height: 130px;
+    }
+    .html i, .css i, .javascript i, .node i, .react i{
+        font-size: 90px;
+        animation: glo 5s ease-in-out 3s infinite alternate;
+    }
+    .html:hover i, .css:hover i, .javascript:hover i, .node:hover i, .react:hover i{
+        font-size: 90px;
+    }
+
+    .project-title h2{
+        font-size: 50px;
+    }
+    .project-name, .project-name2 ,.project-name3{
+        font-size: 20px;
+    }
+    .text-design {
+        font-size: 20px;
+    }
+    .text-design2 {
+        font-size: 17px;
+    }
+    .simi-desktop,.plankworld-desktop,.ecommerce-desktop {
+        width: 25vw;
+    }
+    .simi-phone,.plankworld-phone,.ecommerce-phone {
+        height: 200px;
+        width: 100px;
+    }
+    .project-details, .project-details2, .project-details3 {
+        font-size: 20px;
+    }
+    .go, .go2, .go3 {
+        font-size: 16px;
+    }
+    .go i, .go2 i, .go3 i {
+        font-size: 17px;
+    }
+    .about{
+        min-height:80vh;
+    }
+    .about-body {
+        min-height: 70vh;
+        overflow-x: hidden;
+    }
+    .about h2 {
+        font-size: 50px;
+    }
+    .about-body-left h3 {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .text-design3{
+        font-size: 16px;
+    }
+    .about-body-right-image {
+        min-height: 600px;
+        width: 200px;
+    }
+    .about-body-right-image img {
+        height: 500px;
+        width: 350px;
+        top: 5vh;
+        right: 0px;
+    }
+    .hire {
+        min-height: 80vh;
+    }
+    .hire-head {
+        text-align: center;
+        line-height: 70px;
+    }
+    .hire-head h1 {
+        font-size: 50px;
+    }
+    .hire-head h2 {
+        font-size: 40px;
+    }
+    .hire-form {
+        min-height: 50vh;
+    }
+    .name-section, .email-section, .message-section {
+        font-size: 20px;
+        height: 100px;
+    }
+    .name-section input, .email-section input, .message-section textarea {
+        font-size: 18px;
+    }
+    .button {
+        font-size: 18px;
+        width: 15vw;
+    }
+   .f-socials{
+    font-size: 20px;
+    }
+
+    
+}
+@media screen and (max-width: 690px){
+    .nav-right ul {
+        list-style: none;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .bgc-cheese1 {
+        height: 450px;
+        width: 450px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 2%;
+    }
+    .intro-pic img {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        height: 500px;
+        width: 350px;
+    }
+    .intro-text {
+        min-width: 40vw;
+        min-height: 20vh;
+        height: 50vh;
+        z-index: 2;
+        line-height: 20px;
+    }
+    .intro-text h1 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .intro-text h5 {
+        font-size: 25px;
+        line-height: 70px;
+    }
+    .cta {
+        font-size: 20px;
+        font-weight: 900px;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 620px){
+    
+    .bgc-cheese1 {
+        height: 450px;
+        width: 450px;
+        border-radius: 50%;
+        position: absolute;
+        top: 5%;
+        left: 2%;
+    }
+    .intro-pic img {
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        height: 500px;
+        width: 350px;
+    }
+    .intro-text {
+        min-width: 40vw;
+        min-height: 20vh;
+        height: 50vh;
+        z-index: 2;
+        line-height: 20px;
+    }
+    .intro-text h1 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    .intro-text h5 {
+        font-size: 25px;
+        line-height: 70px;
+    }
+    .cta {
+        font-size: 20px;
+        font-weight: 900px;
+        padding: 10px;
+    }
+    .intro-top h1 {
+        font-size: 10px;
+    }
+}
+
 @media only screen and (max-width: 550px) {
     .about-body {
         overflow-x: hidden;
@@ -2193,7 +2757,7 @@ input:-webkit-autofill:focus {
     }
     
 }
-@media only screen and (max-width: 376px) and (max-height: 813px){
+@media only screen and (max-width: 380px){
 
     nav{
         font-size: 25px;
@@ -2267,7 +2831,81 @@ input:-webkit-autofill:focus {
     }
 
 }
-@media only screen and (max-width: 376px) and (max-height: 668px){
+@media only screen and (max-width: 380px) and (max-height: 813px){
+
+    nav{
+        font-size: 25px;
+    }
+    .phone-menu-links{
+        font-size: 50px;
+    } 
+    .phone-menu-links li {
+        min-height: 13vh;
+    }
+    .phone-f-socials{
+        font-size: 23px;
+    }
+
+
+    .bgc-cheese1{
+        height: 340px;
+        width:  340px;
+        border-radius: 50%;
+        position: absolute;
+        top: 10%;
+        left: 2%;  
+    }
+    .bgc-cheese2, .bgc-cheese3, .bgc-cheese4{
+        height: 280px;
+        width:  280px;
+        top: 20%;
+        left: 3.6%;
+        bottom: 0;
+        z-index: -0; 
+    }
+    .intro{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 70px;
+        text-align: left;
+    }
+    .intro-section {
+        min-width: 80vw;
+        height: 30vh;
+    }
+    .intro-text {
+        min-width: 40vw;
+        min-height: 19vh;
+        height: 100%;
+        z-index: 2;
+        line-height: 20px;
+    }
+    .intro-text h1{
+        font-size: 28px;
+        line-height: 45px;
+    }
+    .intro-text h5{
+        font-size: 18px;
+        line-height: 50px;
+    }
+    .intro-pic img{
+        position: absolute;
+        bottom: 0;
+        right: 0px;
+        height: 350px;
+        width: 250px;
+    }
+
+    .cta{
+        font-size: 15px;
+        font-weight: 900px;
+        padding: 5px;
+    }
+
+}
+@media only screen and (max-width: 380px) and (max-height: 668px){
     nav{
         font-size: 25px;
     }

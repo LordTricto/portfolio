@@ -1,4 +1,19 @@
+var y = window.matchMedia("(max-width: 700px)");
+var z = window.matchMedia("(max-height: 545px)");
 
+window.addEventListener('load', () => {
+        const preload = document.querySelector('.preload');
+        const spinner = document.querySelector('.spinner');
+        const done = document.querySelector('.spinner-done');
+        document.querySelector('.preload-message h1').innerHTML = "Thank You!";
+        preload.classList.add('preload-finish');
+        spinner.style.animation= 'unset';
+        done.style.opacity= '1';
+        // message.classList.add('spinner-done');
+
+        splitScroll(y,z);
+   
+} )
 
 function splitScroll(y,z){
 
@@ -43,12 +58,13 @@ function splitScroll(y,z){
 
 
     if (y.matches || z.matches) { // If media query matches
+        console.log('hi');
       } else {
+        console.log('hiiiii');
         const scene1 = new ScrollMagic.Scene({
             duration:'200%',
             triggerElement: content1,
             triggerHook: 0,
-            reverse:false
         })
         .setPin(content1)
         .addTo(controller);
@@ -222,7 +238,7 @@ function splitScroll(y,z){
    
     .addTo(controller);
 
-    const textAnim16 = TweenMax.fromTo(object8,2, {x: "100", opacity: 0}, {x:0, opacity:1, ease: Power2.easeOut });
+    const textAnim16 = TweenMax.fromTo(object8,2, {x: "70", opacity: 0}, {x:0, opacity:1, ease: Power2.easeOut });
     const scene17 = new ScrollMagic.Scene({
         duration:0,
         triggerElement:object8,
@@ -312,6 +328,20 @@ function splitScroll(y,z){
    
     .addTo(controller);
 
+    
+    TweenLite.onOverwrite = function(overwritten, overwriting, target, props) {
+        console.log("tween that was overwritten");
+        console.log(overwritten);
+        
+        console.log("tween that did the overwriting")
+        console.log(overwriting);
+        
+        console.log("the target of the overwritten tween");
+        console.log(target.innerHTML);
+        
+        console.log("properties that were overwritten");
+        console.log(props);
+      }
 
       var wrapperMenu = document.querySelector('.wrapper-menu');
       var phoneMenu = document.querySelector('.phone-menu');
@@ -383,20 +413,8 @@ function splitScroll(y,z){
         
     });
    
-
-
-
-
-
-
-
-
 }
 TweenLite.defaultOverwrite = 'none';
 
-
-var y = window.matchMedia("(max-width: 700px)");
-var z = window.matchMedia("(max-height: 545px)");
-splitScroll(y,z);
 y.addListener(splitScroll) // Attach listener function on state changes
 z.addListener(splitScroll) // Attach listener function on state changes
