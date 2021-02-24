@@ -97,6 +97,7 @@ html{
 }
 body{
     background-color: white;
+    pointer-events:none;
 }
 .spinner{
     width: 200px;
@@ -190,10 +191,12 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    pointer-events:auto;
 }
 .nav-right ul a{
     text-decoration: none;
     color: inherit;
+    pointer-events:auto;
 }
 .wrapper-menu {
     width: 30px;
@@ -204,6 +207,7 @@ nav{
     cursor: pointer;
     transition: transform 330ms ease-out;
     display: none;
+    pointer-events:auto;
   }
   
   .wrapper-menu.open {
@@ -331,10 +335,12 @@ nav{
     font-size: 50px;
     font-weight: 900px;
     padding: 10px;
+    pointer-events:auto;
 }
 .cta a{
     text-decoration: none;
     color: inherit;
+    pointer-events:auto;
 }
 .intro-pic {
     width: 40vw;
@@ -486,6 +492,7 @@ nav{
     align-items:center;
     width: 40vw;
     font-size: 20px;
+    pointer-events:auto;
 }
 .go a, .go2 a, .go3 a{
     text-decoration: none;
@@ -546,6 +553,7 @@ nav{
     align-items:center;
     object-fit: contain;
     transition: 2s ease-in-out;
+    pointer-events:auto;
 }
 .simi-desktop:hover{
     transform: translateZ(100px);
@@ -557,6 +565,7 @@ nav{
     width: 150px;
     transition: 2s ease-in-out;
     z-index:9;
+    pointer-events:auto;
 }
 .simi-phone:hover{
     transform: translateZ(100px);
@@ -585,6 +594,7 @@ nav{
     object-fit: contain;
     transition: 2s ease-in-out;
     z-index: 2;
+    pointer-events:auto;
 }
 .plankworld-desktop:hover{
     transform: translateZ(100px);
@@ -596,6 +606,7 @@ nav{
     width: 150px;
     transition: 2s ease-in-out;
     z-index:9;
+    pointer-events:auto;
 }
 .plankworld-phone:hover{
     transform: translateZ(100px);
@@ -624,6 +635,7 @@ nav{
     object-fit: contain;
     transition: 2s ease-in-out;
     z-index: 2;
+    pointer-events:auto;
 }
 .ecommerce-desktop:hover{
     transform: translateZ(100px);
@@ -635,6 +647,7 @@ nav{
     width: 150px;
     transition: 2s ease-in-out;
     z-index:9;
+    pointer-events:auto;
 }
 .ecommerce-phone:hover{
     transform: translateZ(100px);
@@ -819,6 +832,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
+    pointer-events:auto;
  }
 .f-socials li{
     width: 5vh;
@@ -865,6 +879,7 @@ nav{
     font-size: 20px;
     font-weight: 900;
     color: black;
+    pointer-events:auto;
 }
 .name-section label, .email-section label, .message-section label {
     position: absolute;
@@ -939,6 +954,7 @@ input:-webkit-autofill:focus {
     cursor: pointer;
     background-color: inherit;
     text-align: center;
+    pointer-events:auto;
 }
 .button:hover{
     border: 2px solid #C2FCF4;
@@ -956,6 +972,7 @@ input:-webkit-autofill:focus {
 
 .project-top-phone,.intro-top-phone,.phone-menu,.wrapper-menu{
     display: none;
+    pointer-events:auto;
 }
 
 @media screen and (max-width: 1700px){
