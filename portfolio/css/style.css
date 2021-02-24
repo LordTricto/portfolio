@@ -7,6 +7,7 @@
 }
 html{
     scroll-behavior: smooth;
+
 }
 @keyframes loading {
   0% {
@@ -95,9 +96,8 @@ html{
     }
 }
 body{
-   
+   pointer-events: none;
     background-color: white;
-  
 }
 .spinner{
     width: 200px;
@@ -131,6 +131,7 @@ body{
     color:#f25a41 ;
     transition: all 0.5s ease;
     font-size: 100px;
+    pointer-events:none;
 }
 .spinner-done i{
    opacity: 0.3;
