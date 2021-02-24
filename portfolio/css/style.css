@@ -96,7 +96,6 @@ html{
     }
 }
 body{
-   pointer-events: none;
     background-color: white;
 }
 .spinner{
