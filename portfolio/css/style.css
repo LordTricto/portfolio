@@ -112,6 +112,7 @@ body{
     right: 0;
     margin: auto;
     animation: spin 1s infinite linear;
+    pointer-events:none;
 }
 .spinner-done{
     width: 200px;
