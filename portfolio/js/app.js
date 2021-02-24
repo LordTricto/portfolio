@@ -9,8 +9,6 @@ window.addEventListener('load', () => {
         preload.classList.add('preload-finish');
         spinner.style.animation= 'unset';
         done.style.opacity= '1';
-        // message.classList.add('spinner-done');
-
         splitScroll(y,z);
    
 } )
@@ -57,10 +55,9 @@ function splitScroll(y,z){
      content1.addEventListener("mousewheel", { passive: false });
 
 
-    if (y.matches || z.matches) { // If media query matches
-        console.log('hi');
+    if (y.matches || z.matches) { 
+
       } else {
-        console.log('hiiiii');
         const scene1 = new ScrollMagic.Scene({
             duration:'200%',
             triggerElement: content1,

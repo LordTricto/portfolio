@@ -535,6 +535,8 @@ nav{
     justify-content: center;
     align-items: center;
     height: 20vh;
+    font-size:20px ;
+    color:rgb(168,20,20);
 }
 .simi-desktop{
     width: 20vw;
@@ -1056,8 +1058,8 @@ input:-webkit-autofill:focus {
     .text-design3 {
         font-size: 25px;
     }
-    .project-details, .project-details2, .project-details3 {
-        font-size: 25px;
+    .project-details,.project-details2,.project-details3{
+        font-size: 23px;
     }
     .go, .go2, .go3 {
         font-size: 17px;
@@ -1256,7 +1258,7 @@ input:-webkit-autofill:focus {
         width: 100px;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 25px;
+        font-size: 20px;
     }
     .go, .go2, .go3 {
         font-size: 17px;
@@ -1436,7 +1438,7 @@ input:-webkit-autofill:focus {
         width: 100px;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 25px;
+        font-size: 20px;
     }
     .go, .go2, .go3 {
         font-size: 17px;
@@ -1642,7 +1644,7 @@ input:-webkit-autofill:focus {
         width: 100px;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 20px;
+        font-size: 17px;
     }
     .go, .go2, .go3 {
         font-size: 16px;
@@ -1815,7 +1817,7 @@ input:-webkit-autofill:focus {
         width: 100px;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 20px;
+        font-size: 17px;
     }
     .go, .go2, .go3 {
         font-size: 16px;
@@ -2252,7 +2254,7 @@ input:-webkit-autofill:focus {
 
     }
     .project-pages {
-        min-height: 300vh;
+        min-height: 370vh;
         justify-content:space-evenly;
         background: rgb(240,240,240);
     }
@@ -2274,7 +2276,7 @@ input:-webkit-autofill:focus {
    
     .section1,.section2 ,.section3{
         min-height: 70vh;
-        height: 70vh;
+        height: unset;
         width: 80vw;
         font-size: 30px;
         border-radius: 10px;
@@ -2316,7 +2318,7 @@ input:-webkit-autofill:focus {
         background: linear-gradient(180deg, rgba(131,131,131,1) 0%, rgba(200,200,200,1) 100%);
         background:  #DAF3FF;
         position: absolute;
-        top: 20%;
+        top: 15%;
         left: 6.0%;
         bottom: 0;
         z-index: -0; 
@@ -2329,9 +2331,10 @@ input:-webkit-autofill:focus {
     }
     .project-details, .project-details2, .project-details3 {
         font-size: 20px;
+        height: 30vh;
     }
     .go, .go2, .go3 {
-        font-size: 20px;
+        font-size: 15px;
         width: 80vw;
     }
     .go i, .go2 i, .go3 i {
@@ -2667,14 +2670,14 @@ input:-webkit-autofill:focus {
         display: none;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 20px;
+        font-size: 17px;
     }
     .go, .go2, .go3 {
-        font-size: 16px;
+        font-size: 14px;
         width: 80vw;
     }
     .go i, .go2 i, .go3 i {
-        font-size: 17px;
+        font-size: 15px;
     }
     .about{
         min-height:80vh;
@@ -2829,6 +2832,9 @@ input:-webkit-autofill:focus {
         font-weight: 900px;
         padding: 5px;
     }
+    .project-details, .project-details2, .project-details3 {
+        font-size: 15px;
+    }
 
 }
 @media only screen and (max-width: 380px) and (max-height: 813px){
@@ -2903,6 +2909,9 @@ input:-webkit-autofill:focus {
         font-weight: 900px;
         padding: 5px;
     }
+    .project-details, .project-details2, .project-details3 {
+        font-size: 15px;
+    }
 
 }
 @media only screen and (max-width: 380px) and (max-height: 668px){
@@ -2928,6 +2937,9 @@ input:-webkit-autofill:focus {
         height: 100%;
         z-index: 2;
         line-height: 20px;
+    }
+    .project-details, .project-details2, .project-details3 {
+        font-size: 15px;
     }
 }
 @media only screen and (max-width: 362px){
@@ -3017,6 +3029,9 @@ input:-webkit-autofill:focus {
     .hire-head h2 {
         font-size: 25px;
     }
+    .project-details, .project-details2, .project-details3 {
+        font-size: 14px;
+    }
     .go, .go2, .go3 {
         font-size: 14px;
         width: 80vw;
@@ -3104,9 +3119,16 @@ input:-webkit-autofill:focus {
     .text-design {
         font-size: 16px;
     }
-    .go, .go2, .go3 {
+    .project-details, .project-details2, .project-details3 {
         font-size: 13px;
     }
+    .go, .go2, .go3 {
+        font-size: 12px;
+    }
+    .go i, .go2 i, .go3 i{
+        font-size: 12px;
+    }
+   
    
     .about-body-left h3 {
         font-size: 15px;
@@ -3589,14 +3611,14 @@ input:-webkit-autofill:focus {
         display: none;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 20px;
+        font-size: 23px;
     }
     .go, .go2, .go3 {
-        font-size: 20px;
+        font-size: 18px;
         width: 80vw;
     }
     .go i, .go2 i, .go3 i {
-        font-size: 20px;
+        font-size: 18px;
     }
     .about{
         min-height:80vh;
@@ -4052,7 +4074,7 @@ input:-webkit-autofill:focus {
         display: none;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 20px;
+        font-size: 23px;
     }
     .go, .go2, .go3 {
         font-size: 20px;
@@ -4594,7 +4616,7 @@ input:-webkit-autofill:focus {
         display: none;
     }
     .project-details, .project-details2, .project-details3 {
-        font-size: 20px;
+        font-size: 23px;
     }
     .go, .go2, .go3 {
         font-size: 20px;
