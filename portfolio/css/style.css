@@ -99,6 +99,9 @@ body{
     background-color: white;
     pointer-events:none;
 }
+main{
+    pointer-events:none;
+}
 .spinner{
     width: 200px;
     height: 200px;
