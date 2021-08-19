@@ -95,11 +95,13 @@ html {
   }
 }
 body {
-  background-color: white;
+  background-color: pink;
   pointer-events: none;
+  overflow-x: hidden;
 }
 main {
   pointer-events: none;
+  overflow-x: hidden;
 }
 .spinner {
   width: 200px;
